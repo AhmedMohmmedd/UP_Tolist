@@ -46,17 +46,23 @@ class _HomeViewState extends State<HomeView> {
               ),
               onPressed: () {
                 showModalBottomSheet(
-                    backgroundColor: AppColor.scendColor,
-                    isScrollControlled: true,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    context: context,
-                    builder: (context) {
-                      return const IntrinsicHeight(
-                        child: AddTaskSheet(),
-                      );
-                    });
+                  backgroundColor: AppColor.scendColor,
+                  isScrollControlled: true,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  context: context,
+                  builder: (context) {
+                    return SingleChildScrollView(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          bottom: MediaQuery.of(context).viewInsets.bottom,
+                        ),
+                        child: const AddTaskSheet(),
+                      ),
+                    );
+                  },
+                );
               }),
     );
   }
