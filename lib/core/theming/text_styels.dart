@@ -2,15 +2,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 abstract class TextStyles {
-  static TextStyle stylesreguler32() {
+  static TextStyle stylesBold32() {
     return TextStyle(
         color: Colors.white,
         fontSize: getResponsiveFontSize(fontSize: 32),
         fontFamily: 'Lato',
         fontWeight: FontWeight.w700);
   }
+  static TextStyle stylesBold20() {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: getResponsiveFontSize(fontSize: 20),
+        fontFamily: 'Lato',
+        fontWeight: FontWeight.w700);
+  }
 
-  static TextStyle stylesreguler40() {
+  static TextStyle stylesBold40() {
     return TextStyle(
         color: Colors.white,
         fontSize: getResponsiveFontSize(fontSize: 40),
@@ -22,6 +29,13 @@ abstract class TextStyles {
     return TextStyle(
         color: Colors.white,
         fontSize: getResponsiveFontSize(fontSize: 16),
+        fontFamily: 'Lato',
+        fontWeight: FontWeight.w400);
+  }
+  static TextStyle stylesreguler18() {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: getResponsiveFontSize(fontSize: 18),
         fontFamily: 'Lato',
         fontWeight: FontWeight.w400);
   }

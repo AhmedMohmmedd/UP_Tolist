@@ -22,7 +22,7 @@ class SplashViewBody extends StatelessWidget {
           ),
           Text(
             'UpTodo',
-            style: TextStyles.stylesreguler40(),
+            style: TextStyles.stylesBold40(),
           ),
         ],
       ),
