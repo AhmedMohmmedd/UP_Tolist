@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:up_tolist/core/shared_widgets/custom_app_bar.dart';
 import 'package:up_tolist/core/theming/app_color.dart';
+import 'package:up_tolist/features/add_task/presentation/views/add_task_sheet.dart';
 import 'package:up_tolist/features/home/presentation/views/widgets/custom_botton_navigatqtion_bar.dart';
 import 'package:up_tolist/features/home/presentation/views/widgets/home_view_body.dart';
 
@@ -43,8 +44,20 @@ class _HomeViewState extends State<HomeView> {
                 size: 28,
                 color: Colors.white,
               ),
-              onPressed: () {},
-            ),
+              onPressed: () {
+                showModalBottomSheet(
+                    backgroundColor: AppColor.scendColor,
+                    isScrollControlled: true,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    context: context,
+                    builder: (context) {
+                      return const IntrinsicHeight(
+                        child: AddTaskSheet(),
+                      );
+                    });
+              }),
     );
   }
 }

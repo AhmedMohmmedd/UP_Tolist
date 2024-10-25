@@ -9,4 +9,8 @@ abstract class AssetImages{
   static const clockBarSlected = 'assets/images/clockBarSlected.svg';
   static const calendarBarUnSlected = 'assets/images/calendar.svg';
   static const calendarBarSlected = 'assets/images/calendarBarSlected.svg';
+  static const send = 'assets/images/send.svg';
+  static const tag = 'assets/images/tag.svg';
+  static const timer = 'assets/images/timer.svg';
+  static const flag = 'assets/images/flag.svg';
 }
