@@ -1,47 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:up_tolist/core/constansts/asset_images.dart';
-import 'package:up_tolist/core/theming/text_styels.dart';
+import 'package:up_tolist/core/shared_widgets/custom_app_bar.dart';
+import 'package:up_tolist/core/theming/app_color.dart';
+import 'package:up_tolist/features/home/presentation/views/widgets/custom_botton_navigatqtion_bar.dart';
 import 'package:up_tolist/features/home/presentation/views/widgets/home_view_body.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  int curentIndex = 0;
+  final pages = const [
+    HomeViewBody(),
+    SizedBox(),
+    SizedBox(),
+    SizedBox(),
+  ];
+  void onItemTapped(int index) {
+    setState(() {
+      curentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Index',
-          style: TextStyles.stylesreguler20(),
-        ),
-        centerTitle: true,
-        leading: const Icon(
-          Icons.filter_list_outlined,
-          color: Colors.white,
-          size: 34,
-        ),
-        actions: [
-          Container(
-            margin: const EdgeInsets.only(
-              right: 14,
-              top: 5,
-            ),
-            height: 60,
-            width: 60,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage(
-                  AssetImages.profileDemo,
-                ),
-                fit: BoxFit.contain,
-              ),
-            ),
-          ),
-        ],
+      appBar: const CustomAppBar(),
+      body: pages[curentIndex],
+      bottomNavigationBar: CustomBottomNavigationBar(
+        curentIndex: curentIndex,
+        onItemTapped: onItemTapped,
       ),
-      body:const HomeViewBody(),
+      floatingActionButton: curentIndex == 3
+          ? null
+          : FloatingActionButton(
+              backgroundColor: AppColor.primeryColor,
+              child: const Icon(
+                Icons.add_outlined,
+                size: 28,
+                color: Colors.white,
+              ),
+              onPressed: () {},
+            ),
     );
   }
 }
