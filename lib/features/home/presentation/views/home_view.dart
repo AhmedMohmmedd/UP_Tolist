@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:up_tolist/core/constansts/asset_images.dart';
 import 'package:up_tolist/core/theming/text_styels.dart';
+import 'package:up_tolist/features/home/presentation/views/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -37,10 +38,10 @@ class HomeView extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-           
           ),
         ],
       ),
+      body:const HomeViewBody(),
     );
   }
 }
