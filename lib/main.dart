@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:up_tolist/features/home/presentation/views/home_view.dart';
 import 'package:up_tolist/features/splash/presentation/views/splash_view.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'UP ToList',
       darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: const SplashView(),
+      home: const HomeView(),
     );
   }
 }

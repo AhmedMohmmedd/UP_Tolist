@@ -2,25 +2,34 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 abstract class TextStyles {
+  static TextStyle stylesreguler32() {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: getResponsiveFontSize(fontSize: 32),
+        fontFamily: 'Lato',
+        fontWeight: FontWeight.w700);
+  }
 
-  static TextStyle stylesreguler32( ) {
+  static TextStyle stylesreguler40() {
     return TextStyle(
         color: Colors.white,
-        fontSize: getResponsiveFontSize( fontSize: 32),
+        fontSize: getResponsiveFontSize(fontSize: 40),
         fontFamily: 'Lato',
         fontWeight: FontWeight.w700);
   }
-  static TextStyle stylesreguler40( ) {
+
+  static TextStyle stylesreguler16() {
     return TextStyle(
         color: Colors.white,
-        fontSize: getResponsiveFontSize( fontSize: 40),
+        fontSize: getResponsiveFontSize(fontSize: 16),
         fontFamily: 'Lato',
-        fontWeight: FontWeight.w700);
+        fontWeight: FontWeight.w400);
   }
-  static TextStyle stylesreguler16( ) {
+
+  static TextStyle stylesreguler20() {
     return TextStyle(
         color: Colors.white,
-        fontSize: getResponsiveFontSize( fontSize: 16),
+        fontSize: getResponsiveFontSize(fontSize: 20),
         fontFamily: 'Lato',
         fontWeight: FontWeight.w400);
   }
@@ -41,7 +50,7 @@ double getScaleFactor() {
   var physicalWidth = dispatcher.views.first.physicalSize.width;
   var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
   double width = physicalWidth / devicePixelRatio;
-return width;
+  return width;
   // double width = MediaQuery.sizeOf(context).width;
   // if (width < 700) {
   //   return width / 600;
