@@ -49,7 +49,13 @@ class AddTaskSheet extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {
-                        showDatePickrtBottomSheet(context);
+                        showTimePicker(
+                          helpText: 'Choose Time',
+                          confirmText: 'Edit',
+                          context: context,
+                          initialTime: TimeOfDay.now(),
+                          initialEntryMode: TimePickerEntryMode.input,
+                        );
                       },
                       icon: SvgPicture.asset(AssetImages.timer),
                     ),
@@ -57,7 +63,9 @@ class AddTaskSheet extends StatelessWidget {
                       width: 14,
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDatePickrtBottomSheet(context);
+                      },
                       icon: SvgPicture.asset(AssetImages.tag),
                     ),
                     const SizedBox(
@@ -79,7 +87,5 @@ class AddTaskSheet extends StatelessWidget {
         ),
       ),
     );
-  
-
   }
 }
