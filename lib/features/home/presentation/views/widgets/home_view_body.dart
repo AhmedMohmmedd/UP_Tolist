@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:up_tolist/core/constansts/asset_images.dart';
 import 'package:up_tolist/core/theming/text_styels.dart';
 
@@ -14,7 +15,7 @@ class HomeViewBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(AssetImages.homeIndex),
+          SvgPicture.asset(AssetImages.homeIndex),
           Text(
             'What do you want to do today?',
             style: TextStyles.stylesreguler20(),

@@ -1,12 +1,7 @@
-import 'package:date_picker_plus/date_picker_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:up_tolist/core/constansts/asset_images.dart';
-import 'package:up_tolist/core/theming/app_color.dart';
 import 'package:up_tolist/core/theming/text_styels.dart';
-import 'package:up_tolist/features/add_task/presentation/views/widgets/custom_elevated_button.dart';
+import 'package:up_tolist/features/add_task/presentation/views/widgets/bottom_actions_row.dart';
 import 'package:up_tolist/features/add_task/presentation/views/widgets/custom_text_field.dart';
-import 'package:up_tolist/features/add_task/presentation/views/widgets/date_picker.dart';
 
 class AddTaskSheet extends StatelessWidget {
   const AddTaskSheet({super.key});
@@ -42,47 +37,7 @@ class AddTaskSheet extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        showTimePicker(
-                          helpText: 'Choose Time',
-                          confirmText: 'Edit',
-                          context: context,
-                          initialTime: TimeOfDay.now(),
-                          initialEntryMode: TimePickerEntryMode.input,
-                        );
-                      },
-                      icon: SvgPicture.asset(AssetImages.timer),
-                    ),
-                    const SizedBox(
-                      width: 14,
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        showDatePickrtBottomSheet(context);
-                      },
-                      icon: SvgPicture.asset(AssetImages.tag),
-                    ),
-                    const SizedBox(
-                      width: 14,
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: SvgPicture.asset(AssetImages.flag),
-                    ),
-                  ],
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(AssetImages.send),
-                ),
-              ],
-            )
+           const BottomActiomsRow()
           ],
         ),
       ),
