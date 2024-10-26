@@ -1,8 +1,12 @@
+import 'package:date_picker_plus/date_picker_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:up_tolist/core/constansts/asset_images.dart';
+import 'package:up_tolist/core/theming/app_color.dart';
 import 'package:up_tolist/core/theming/text_styels.dart';
+import 'package:up_tolist/features/add_task/presentation/views/widgets/custom_elevated_button.dart';
 import 'package:up_tolist/features/add_task/presentation/views/widgets/custom_text_field.dart';
+import 'package:up_tolist/features/add_task/presentation/views/widgets/date_picker.dart';
 
 class AddTaskSheet extends StatelessWidget {
   const AddTaskSheet({super.key});
@@ -44,7 +48,9 @@ class AddTaskSheet extends StatelessWidget {
                 Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDatePickrtBottomSheet(context);
+                      },
                       icon: SvgPicture.asset(AssetImages.timer),
                     ),
                     const SizedBox(
@@ -73,5 +79,7 @@ class AddTaskSheet extends StatelessWidget {
         ),
       ),
     );
+  
+
   }
 }
