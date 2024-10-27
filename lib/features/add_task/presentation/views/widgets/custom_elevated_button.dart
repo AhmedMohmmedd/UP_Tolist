@@ -6,20 +6,22 @@ class CustomElevatedButton extends StatelessWidget {
     super.key,
     required this.text,
     this.color,
-    this.textColor,
+    this.textColor, this.width,
   });
   final String text;
   final Color? color;
   final Color? textColor;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      
       onPressed: () {
         Navigator.pop(context);
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
-        fixedSize: Size(MediaQuery.sizeOf(context).width * .4, 60),
+        fixedSize: Size(width?? MediaQuery.sizeOf(context).width * .4, 60),
         textStyle: TextStyles.stylesBold16().copyWith(
           color: textColor ?? Colors.white,
         ),

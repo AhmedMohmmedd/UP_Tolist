@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:up_tolist/core/constansts/asset_images.dart';
+import 'package:up_tolist/features/add_task/presentation/views/widgets/choose_category_bottom_sheet.dart';
 import 'package:up_tolist/features/add_task/presentation/views/widgets/date_picker.dart';
 
 class BottomActiomsRow extends StatelessWidget {
@@ -41,7 +41,9 @@ class BottomActiomsRow extends StatelessWidget {
               width: 14,
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                chooseCategoryshowlBottomSheet(context);
+              },
               icon: SvgPicture.asset(AssetImages.flag),
             ),
           ],

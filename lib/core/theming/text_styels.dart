@@ -23,6 +23,7 @@ abstract class TextStyles {
         fontFamily: 'Lato',
         fontWeight: FontWeight.w700);
   }
+  
 
   static TextStyle stylesBold40() {
     return TextStyle(
@@ -58,6 +59,13 @@ abstract class TextStyles {
     return TextStyle(
         color: Colors.white,
         fontSize: getResponsiveFontSize(fontSize: 20),
+        fontFamily: 'Lato',
+        fontWeight: FontWeight.w400);
+  }
+  static TextStyle stylesreguler14() {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: getResponsiveFontSize(fontSize: 14),
         fontFamily: 'Lato',
         fontWeight: FontWeight.w400);
   }
