@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:up_tolist/core/theming/text_styels.dart';
 import 'package:up_tolist/features/add_task/presentation/views/widgets/bottom_actions_row.dart';
-import 'package:up_tolist/features/add_task/presentation/views/widgets/custom_text_field.dart';
+import 'package:up_tolist/core/shared_widgets/custom_text_field.dart';
 
 class AddTaskSheet extends StatelessWidget {
   const AddTaskSheet({super.key});

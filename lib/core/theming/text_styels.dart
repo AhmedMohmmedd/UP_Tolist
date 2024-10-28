@@ -67,7 +67,7 @@ abstract class TextStyles {
         color: Colors.white,
         fontSize: getResponsiveFontSize(fontSize: 14),
         fontFamily: 'Lato',
-        fontWeight: FontWeight.w400);
+        fontWeight: FontWeight.w300);
   }
 }
 
