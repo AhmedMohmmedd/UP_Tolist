@@ -54,7 +54,7 @@ class CustomTaskItem extends StatelessWidget {
                     Text(
                       'Today At 18:20',
                       style: TextStyles.stylesreguler14(),
-                    ), //
+                    ), 
                     Container(
                       height: 35,
                       decoration: BoxDecoration(
@@ -81,9 +81,9 @@ class CustomTaskItem extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
