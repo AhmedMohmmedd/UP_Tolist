@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'UP ToList',
       darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: const HomeView(),
+      home: const SplashView(),
     );
   }
 }
