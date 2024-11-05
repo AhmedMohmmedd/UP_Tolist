@@ -47,6 +47,13 @@ abstract class TextStyles {
         fontFamily: 'Lato',
         fontWeight: FontWeight.w300);
   }
+  static TextStyle stylesreguler10() {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: getResponsiveFontSize(fontSize: 10),
+        fontFamily: 'Lato',
+        fontWeight: FontWeight.w300);
+  }
   static TextStyle stylesreguler18() {
     return TextStyle(
         color: Colors.white,

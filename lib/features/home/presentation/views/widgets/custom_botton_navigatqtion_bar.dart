@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:up_tolist/core/constansts/asset_images.dart';
@@ -26,15 +25,15 @@ class CustomBottomNavigationBar extends StatelessWidget {
           backgroundColor: AppColor.scendColor,
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(AssetImages.calendarBarUnSlected),
-          activeIcon: SvgPicture.asset(AssetImages.calendarBarSlected),
-          label: 'Calendar',
-          backgroundColor: AppColor.scendColor,
-        ),
-        BottomNavigationBarItem(
           icon: SvgPicture.asset(AssetImages.clockBarUnSlected),
           activeIcon: SvgPicture.asset(AssetImages.clockBarSlected),
           label: 'Focuse',
+          backgroundColor: AppColor.scendColor,
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(AssetImages.calendarBarUnSlected),
+          activeIcon: SvgPicture.asset(AssetImages.calendarBarSlected),
+          label: 'Calendar',
           backgroundColor: AppColor.scendColor,
         ),
         BottomNavigationBarItem(

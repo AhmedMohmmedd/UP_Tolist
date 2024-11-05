@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:up_tolist/core/shared_widgets/custom_app_bar.dart';
 import 'package:up_tolist/core/theming/app_color.dart';
 import 'package:up_tolist/features/add_task/presentation/views/add_task_sheet.dart';
+import 'package:up_tolist/features/daliy_tasks/presentation/views/daily_tasks.dart';
 import 'package:up_tolist/features/home/presentation/views/widgets/custom_botton_navigatqtion_bar.dart';
 import 'package:up_tolist/features/home/presentation/views/widgets/home_view_body.dart';
 
@@ -16,7 +17,7 @@ class _HomeViewState extends State<HomeView> {
   int curentIndex = 0;
   final pages = const [
     HomeViewBody(),
-    SizedBox(),
+    DaliyTasks(),
     SizedBox(),
     SizedBox(),
   ];
