@@ -19,8 +19,9 @@ class CustomTaskItem extends StatelessWidget {
         color: AppColor.scendColor,
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+        padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             IconButton(
               onPressed: () {},
@@ -54,7 +55,10 @@ class CustomTaskItem extends StatelessWidget {
                     Text(
                       'Today At 18:20',
                       style: TextStyles.stylesreguler14(),
-                    ), 
+                    ),
+                    const SizedBox(
+                  width: 40,
+                ),
                     Container(
                       height: 35,
                       decoration: BoxDecoration(
@@ -62,22 +66,23 @@ class CustomTaskItem extends StatelessWidget {
                           color: const Color(0xff809CFF)),
                       child: Padding(
                         padding: const EdgeInsets.all(5),
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                                AssetImages.categoryunversity),
-                            const SizedBox(
-                              height: 8,
-                            ),
-                            FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Text(
-                                'Unversity',
-                                style: TextStyles.stylesreguler14(),
-                              ),
-                            ),
-                          ],
-                        ),
+                        child: SvgPicture.asset(AssetImages.categoryunversity),
+                        // child: Row(
+                        //   children: [
+                        //     SvgPicture.asset(
+                        //         AssetImages.categoryunversity),
+                        //     const SizedBox(
+                        //       height: 8,
+                        //     ),
+                        //     FittedBox(
+                        //       fit: BoxFit.scaleDown,
+                        //       child: Text(
+                        //         'Unversity',
+                        //         style: TextStyles.stylesreguler14(),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
                       ),
                     ),
                   ],

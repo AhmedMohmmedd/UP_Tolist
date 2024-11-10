@@ -45,7 +45,7 @@ void chooseCategoryshowlBottomSheet(BuildContext context) {
                   height: 14,
                 ),
                 CustomElevatedButton(
-                  textColor: Colors.white,
+                  textColor: Colors.red,
                   text: 'Add Category',
                   color: AppColor.primeryColor,
                   width: MediaQuery.sizeOf(context).width * .9,

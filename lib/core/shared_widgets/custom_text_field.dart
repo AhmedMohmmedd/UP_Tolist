@@ -14,16 +14,19 @@ Widget customTextField({
   Function()? pressed,
   Function()? tap,
   bool? enable,
+  int? maxline,
 }) =>
     TextFormField(
       onTap: tap,
       enabled: enable,
       controller: controller,
       obscureText: isObscure,
+      maxLines: maxline,
       decoration: InputDecoration(
         hintStyle: TextStyles.stylesreguler12(),
         labelText: label,
         hintText: hint,
+        
         prefixIcon: Icon(prefix),
         suffixIcon: suffix != null
             ? IconButton(

@@ -33,7 +33,7 @@ class AddTaskSheet extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            customTextField(hint: 'Description'),
+            customTextField(hint: 'Description',maxline: 4),
             const SizedBox(
               height: 30,
             ),

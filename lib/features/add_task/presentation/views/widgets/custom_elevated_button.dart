@@ -20,6 +20,7 @@ class CustomElevatedButton extends StatelessWidget {
         Navigator.pop(context);
       },
       style: ElevatedButton.styleFrom(
+        elevation: .0,
         backgroundColor: color,
         fixedSize: Size(width?? MediaQuery.sizeOf(context).width * .4, 60),
         textStyle: TextStyles.stylesBold16().copyWith(
