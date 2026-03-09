@@ -4,7 +4,7 @@ import 'package:up_tolist/core/theming/text_styels.dart';
 import 'package:up_tolist/features/add_task/presentation/views/widgets/categores_list.dart';
 import 'package:up_tolist/features/add_task/presentation/views/widgets/custom_elevated_button.dart';
 
-void chooseCategoryshowlBottomSheet(BuildContext context) {
+void chooseCategoryshowlBottomSheet(BuildContext context, final Function(int) onCategoryPicked) {
   showModalBottomSheet(
       isScrollControlled: true,
       backgroundColor: AppColor.scendColor,
@@ -38,7 +38,12 @@ void chooseCategoryshowlBottomSheet(BuildContext context) {
                   ),
                   itemCount: categorysList.length,
                   itemBuilder: (context, index) {
-                    return categorysList[index];
+                    return GestureDetector(
+                      child: categorysList[index],
+                      onTap: () {
+                        onCategoryPicked(index);
+                      },
+                    );
                   },
                 ),
                 const SizedBox(

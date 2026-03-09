@@ -8,6 +8,8 @@ class AddTaskSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController titelController = TextEditingController();
+    TextEditingController SubTitelController = TextEditingController();
     return Container(
       width: double.infinity,
       child: Padding(
@@ -22,7 +24,10 @@ class AddTaskSheet extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            customTextField(hint: 'Titel'),
+            customTextField(
+              hint: 'Titel',
+              controller: titelController,
+            ),
             const SizedBox(
               height: 12,
             ),
@@ -33,11 +38,19 @@ class AddTaskSheet extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            customTextField(hint: 'Description',maxline: 4),
+            customTextField(
+              hint: 'Description',
+              maxline: 4,
+              controller: SubTitelController,
+            ),
             const SizedBox(
               height: 30,
             ),
-           const BottomActiomsRow()
+            BottomActiomsRow(
+              onPressed: () {
+                print(titelController.value.toString());
+              },
+            )
           ],
         ),
       ),

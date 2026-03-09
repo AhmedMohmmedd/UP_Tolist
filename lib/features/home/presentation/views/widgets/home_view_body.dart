@@ -37,7 +37,7 @@ class HomeViewBody extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                 child: Text(
-                  'Today',
+                  'Today,',
                   style: TextStyles.stylesreguler16(),
                 ),
               ),
@@ -48,7 +48,7 @@ class HomeViewBody extends StatelessWidget {
             ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: 3,
+                itemCount: 4,
                 itemBuilder: (context, index) {
                   return const Padding(
                     padding: EdgeInsets.only(bottom: 12),
@@ -67,7 +67,7 @@ class HomeViewBody extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                 child: Text(
-                  'Completed',
+                  'All,',
                   style: TextStyles.stylesreguler16(),
                 ),
               ),
@@ -78,7 +78,7 @@ class HomeViewBody extends StatelessWidget {
             ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: 1,
+                itemCount: 5,
                 itemBuilder: (context, index) {
                   return const Padding(
                     padding: EdgeInsets.only(bottom: 12),
