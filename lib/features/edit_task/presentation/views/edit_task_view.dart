@@ -132,22 +132,24 @@ class EditTaskView extends StatelessWidget {
               const SizedBox(
                 height: 24,
               ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.remove_circle,
-                      color: Colors.red,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 9),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      AssetImages.trash,
                     ),
-                  ),
-                  Text(
-                    'Delete Task',
-                    style: TextStyles.stylesreguler12().copyWith(
-                      color: Colors.red,
+                    const SizedBox(
+                      width: 8,
                     ),
-                  ),
-                ],
+                    Text(
+                      'Delete Task',
+                      style: TextStyles.stylesreguler12().copyWith(
+                        color: Colors.red,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const Spacer(),
               const CustomElevatedButtonFullWidth(

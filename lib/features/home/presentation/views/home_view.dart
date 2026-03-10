@@ -5,6 +5,7 @@ import 'package:up_tolist/features/add_task/presentation/views/add_task_sheet.da
 import 'package:up_tolist/features/daliy_tasks/presentation/views/daily_tasks.dart';
 import 'package:up_tolist/features/home/presentation/views/widgets/custom_botton_navigatqtion_bar.dart';
 import 'package:up_tolist/features/home/presentation/views/widgets/home_view_body.dart';
+import 'package:up_tolist/features/profile/presentation/views/profile_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -19,7 +20,7 @@ class _HomeViewState extends State<HomeView> {
     HomeViewBody(),
     DaliyTasks(),
     SizedBox(),
-    SizedBox(),
+    ProfileView(),
   ];
   void onItemTapped(int index) {
     setState(() {
@@ -30,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      // appBar: const CustomAppBar(),
       body: pages[curentIndex],
       bottomNavigationBar: CustomBottomNavigationBar(
         curentIndex: curentIndex,

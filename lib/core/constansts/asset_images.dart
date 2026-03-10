@@ -15,6 +15,15 @@ abstract class AssetImages {
   static const tag = 'assets/images/tag.svg';
   static const timer = 'assets/images/timer.svg';
   static const flag = 'assets/images/flag.svg';
+  static const trash = 'assets/images/trash.svg';
+  static const logout = 'assets/images/logout.svg';
+  static const key = 'assets/images/key.png';
+  static const like = 'assets/images/like.svg';
+  static const flash = 'assets/images/flash.svg';
+  static const camera = 'assets/images/camera.svg';
+  static const setting = 'assets/images/setting-2.svg';
+  static const menu = 'assets/images/menu.svg';
+  static const arrowleft = 'assets/images/arrow-left.svg';
   static const categoryadd = 'assets/images/category/add.svg';
   static const categorydesign = 'assets/images/category/design.svg';
   static const categorygroceryv = 'assets/images/category/groceryv.svg';

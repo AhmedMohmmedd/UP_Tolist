@@ -2,6 +2,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 abstract class TextStyles {
+  static TextStyle stylesMeduim20() {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: getResponsiveFontSize(fontSize: 20),
+        fontFamily: 'Lato',
+        fontWeight: FontWeight.w500);
+  }
   static TextStyle stylesBold32() {
     return TextStyle(
         color: Colors.white,
